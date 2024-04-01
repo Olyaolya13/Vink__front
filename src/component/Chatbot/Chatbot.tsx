@@ -4,7 +4,7 @@ import { Box, Divider, IconButton, InputBase, Paper } from '@mui/material';
 const styles = {
   container: {
     position: 'absolute',
-    bottom: '20px',
+    bottom: '-120px',
     right: '100px',
     width: '771px',
     border: '1px solid #ccc',

@@ -1,7 +1,7 @@
 import { IconButton, Stack } from '@mui/material';
 import ChatbotBTN from '../../assets/ChatbotBTN.svg?react';
 import { useState } from 'react';
-import ChatbotContent from '../CharbotContent/ChatbotContent';
+import ChatbotContent from '../Chatbot-content/Chatbot-content';
 
 const styles = {
   container: { position: 'absolute', bottom: '90px', right: '50px' }

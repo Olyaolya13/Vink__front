@@ -1,5 +1,5 @@
 import styles from './app.module.scss';
-import ChatbotBtn from '../ChatbotBtn/ChatbotBtn';
+import ChatbotBtn from '../Chatbot-Btn/Chatbot-Btn';
 
 export default function App() {
   return (
