@@ -1,9 +1,9 @@
 import { Box, IconButton, Stack } from '@mui/material';
 import TelegramIcon from '../../assets/TelegrammIcon.svg?react';
 import Bot from '../../assets/BotIcon.svg?react';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Chatbot from '../Chatbot/Chatbot';
-import Overlay from "../overlay/overlay";
+import Overlay from '../overlay/overlay';
 
 const styles = {
   container: { position: 'absolute', bottom: '70px', right: '0', zIndex: 10 },
@@ -20,17 +20,17 @@ export default function ChatbotContent() {
   };
 
   const closeChatbot = () => {
-    setIsChatbotOpen(false)
+    setIsChatbotOpen(false);
   };
 
   useEffect(() => {
     function closeEsc(e: KeyboardEvent) {
       if (e.key === 'Escape') {
-        closeChatbot()
+        closeChatbot();
       }
     }
-    document.addEventListener('keydown', closeEsc)
-    return () => document.removeEventListener('keydown', closeEsc)
+    document.addEventListener('keydown', closeEsc);
+    return () => document.removeEventListener('keydown', closeEsc);
   }, []);
 
   return (
@@ -40,7 +40,7 @@ export default function ChatbotContent() {
           <Bot />
         </IconButton>
 
-        <Overlay closeChatbot={closeChatbot}/>
+        <Overlay closeChatbot={closeChatbot} />
         {isChatbotOpen && <Chatbot />}
 
         <TelegramIcon />
