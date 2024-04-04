@@ -64,6 +64,10 @@ export default function Chatbot() {
     const [messages, setMessages] = useState<Array<{ text: string; user: boolean }>>([]);
     // const formRef = React.useRef(null);
 
+    const [botMessage, setBotMessage] = useState<string>('');
+
+    console.log(botMessage)
+
     const chat = (): string => {
         return 'hello';
     };
@@ -85,15 +89,14 @@ export default function Chatbot() {
         if (input.trim() === '') return;
 
         addMessage(input, true);
-
-        // getProductInfo().then((res) => {
-        //     console.log(res)
-        // })
     };
 
     const sendInput = (value: string) => {
         // setInput(value);
         addMessage(value, true);
+        getProductInfo().then((res) => {
+            setBotMessage(res.text)
+        })
     }
 
     return (
